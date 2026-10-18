@@ -1,152 +1,94 @@
-# Arshiya Moallem - Portfolio 
+# Arshiya Moallem - Portfolio
 
-A fully responsive personal portfolio showcasing my projects, education, experience, and technical skills.
+Personal portfolio showcasing my projects, experience, education, and skills.
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
-![Responsive](https://img.shields.io/badge/Responsive-Yes-blue)
-![Dark Mode](https://img.shields.io/badge/Dark%20Mode-Supported-purple)
+**Live site:** [arshiyamoallem.com](https://arshiyamoallem.com)
 
-## 🌐 Live Demo
+## Features
 
-[View Live Site](https://arshiyamoallem.github.io/Portfolio/) 
+- **Responsive design** for phone, tablet, and desktop
+- **Single dark theme** with one accent color, defined once in CSS
+- **Sticky navbar** with a mobile menu
+- **Project cards** with tech tags and GitHub links
+- **Timeline** for experience and education
+- **Skills** grouped by category with icons
+- **Blog section** (placeholder posts for now)
+- **Contact form** in a modal, with a confirmation message and Escape-to-close
+- **Scroll fade-in animations** that respect the "reduce motion" system setting
+- **Content stored as data**, so adding a project or job means editing one file
 
-## ✨ Features
+## Tech Stack
 
-- **Fully Responsive Design** - Optimized for mobile, tablet, and desktop devices
-- **Dark/Light Mode Toggle** - Persistent theme preference using localStorage
-- **Mobile Navigation** - Hamburger menu for seamless mobile experience
-- **Interactive Timeline** - Visual education and experience timeline
-- **Hexagonal Skills Display** - Unique hexagonal grid showcasing technical skills
-- **Contact Form** - Integrated contact form with Formspree
-- **Smooth Animations** - Subtle hover effects and transitions throughout
-- **SEO Optimized** - Semantic HTML and proper meta tags
+- [React](https://react.dev) with [TypeScript](https://www.typescriptlang.org)
+- [Vite](https://vite.dev) for the dev server and build
+- [Tailwind CSS](https://tailwindcss.com) (v4) for styling
+- [Devicon](https://devicon.dev) for skill icons and [Inter](https://rsms.me/inter/) for type
+- [Formspree](https://formspree.io) for the contact form
+- GitHub Actions and GitHub Pages for deployment
 
-## 🛠️ Technologies Used
-
-### Frontend
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with CSS Grid, Flexbox, and CSS Variables
-- **JavaScript (Vanilla)** - Interactive features and theme management
-- **Font Awesome** - Icon library
-
-### Tools & Services
-- **Formspree** - Contact form backend
-- **Git & GitHub** - Version control and hosting
-- **GitHub Pages** - Deployment (if applicable)
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 Portfolio/
-├── README.md              # This file
-├── LICENSE              
+├── .github/workflows/deploy.yml   # Builds and deploys on push to main
+├── public/                        # Served as-is (copied into dist/)
+│   ├── CNAME
+│   ├── docs/                      # Resume PDF
+│   └── img/                       # Profile photo and icons
 ├── src/
-│   ├── index.html
-│   └── style.css
-|   └── script.js
-├── img/
-│   ├── arshiyamoallem_profile.PNG
-│   └── AMIcon.png
-│   └── etc
-└── docs/
-    └── Arshiya Moallem Resume.pdf
+│   ├── components/                # Navbar, Hero, ProjectCard, Timeline, ...
+│   ├── data/                      # projects, experience, education, skills, blog, links
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css                  # Theme colors and base styles
+├── index.html
+├── vite.config.ts
+└── package.json
 ```
 
-## 🚀 Quick Start
+## Getting Started
 
-### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- Basic text editor (VS Code, Sublime Text, etc.)
-- Git (optional, for cloning)
+Requires Node.js 20.19+ (or 22.12+).
 
-## 📱 Responsive Breakpoints
+```bash
+git clone https://github.com/arshiyamoallem/Portfolio.git
+cd Portfolio
+npm install
+npm run dev
+```
 
-| Device Type | Screen Width | Features |
-|------------|--------------|----------|
-| Mobile     | < 768px      | Hamburger menu, single column, stacked timeline |
-| Tablet     | 768px - 1024px | Icon-only nav, 2-3 columns, optimized layout |
-| Desktop    | > 1024px     | Full navigation, multi-column grid, wide timeline |
+Then open the local URL that Vite prints (usually `http://localhost:5173/`).
 
-## 🔧 Configuration
+| Command           | What it does                               |
+| ----------------- | ------------------------------------------ |
+| `npm run dev`     | Start the dev server with live reload      |
+| `npm run build`   | Type-check and build the site into `dist/` |
+| `npm run preview` | Serve the built site locally               |
+| `npm run lint`    | Run ESLint                                 |
 
-### Dark Mode
-The dark mode preference is automatically saved to `localStorage`. Users' theme choice persists across sessions.
+## Customizing
 
-### Mobile Menu
-The mobile menu automatically appears on screens smaller than 768px and closes when:
-- A navigation link is clicked
-- The window is resized above the mobile breakpoint
-- The hamburger icon is clicked again
+- **Content:** edit the files in `src/data/` (projects, experience, education, skills, blog posts, and links).
+- **Colors:** change the values under `@theme` in `src/index.css`. The accent color is `--color-accent`.
+- **Contact form:** the endpoint is in `src/components/ContactModal.tsx`.
 
-## 📊 Browser Support
+## Deployment
 
-| Browser | Version |
-|---------|---------|
-| Chrome  | Latest 2 versions |
-| Firefox | Latest 2 versions |
-| Safari  | Latest 2 versions |
-| Edge    | Latest 2 versions |
+Pushing to `main` runs `.github/workflows/deploy.yml`, which installs dependencies, runs `npm run build`, and publishes `dist/` to GitHub Pages. In the repo settings, Pages must use **GitHub Actions** as its source, and the custom domain is set there.
 
-## 🐛 Known Issues
+## Version History
 
-None at the moment! Feel free to open an issue if you find one.
+- **v3.0:** Rebuilt with React, TypeScript, Vite, and Tailwind
+- **v2.0:** Plain HTML, CSS, and JavaScript version (preserved as a Git tag)
 
-## 📈 Performance
+## License
 
-- **Lighthouse Score**: 95+ (Performance, Accessibility, Best Practices, SEO)
-- **Mobile-Friendly**: Yes (Google Mobile-Friendly Test)
-- **Load Time**: < 2 seconds on 3G
+Available under the [MIT License](LICENSE).
 
-## 🚧 Roadmap
-
-Future improvements planned:
-- [ ] Add animation on scroll for timeline items
-- [ ] Implement lazy loading for images
-- [ ] Add a blog section
-- [ ] Create project detail pages
-- [ ] Add more interactive elements
-- [ ] Implement progressive web app features
-- [ ] Add accessibility improvements (ARIA labels)
-- [ ] Create multilingual support
-
-## 📝 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 👤 Author
+## Author
 
 **Arshiya Moallem**
 
 - GitHub: [@arshiyamoallem](https://github.com/arshiyamoallem)
-- LinkedIn: [arshiyamoallem](https://www.linkedin.com/in/arshiya-moallem-63282b2a0/)
-- Email: [Contact via website form]
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 💡 Acknowledgments
-
-- Font Awesome for icons
-- Formspree for form handling
-- Inspiration from various portfolio designs
-- Special thanks to the open-source community
-
-## 📞 Support
-
-If you have any questions or need help with the website:
-- Open an issue on GitHub
-- Contact me through the website contact form
-- Connect on LinkedIn
-
----
-
-⭐ **Star this repo if you find it helpful!**
-
-Last Updated: February 2025
+- LinkedIn: [arshiya-moallem](https://www.linkedin.com/in/arshiya-moallem-63282b2a0/)
+- Contact: use the form on the [website](https://arshiyamoallem.com)
