@@ -1,6 +1,6 @@
-# Arshiya Moallem - Portfolio Website
+# Arshiya Moallem - Portfolio 
 
-A fully responsive personal portfolio website showcasing my projects, education, experience, and technical skills.
+A fully responsive personal portfolio showcasing my projects, education, experience, and technical skills.
 
 ![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-blue)
@@ -8,7 +8,7 @@ A fully responsive personal portfolio website showcasing my projects, education,
 
 ## 🌐 Live Demo
 
-[View Live Site](https://arshiyamoallem.github.io/Portfolio-Website-v2/) 
+[View Live Site](https://arshiyamoallem.github.io/Portfolio/) 
 
 ## ✨ Features
 
@@ -37,7 +37,7 @@ A fully responsive personal portfolio website showcasing my projects, education,
 ## 📁 Project Structure
 
 ```
-portfolio-website/
+Portfolio/
 ├── README.md              # This file
 ├── LICENSE              
 ├── src/
