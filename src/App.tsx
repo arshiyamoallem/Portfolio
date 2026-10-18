@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Section from './components/Section'
@@ -5,6 +6,8 @@ import ProjectCard from './components/ProjectCard'
 import Timeline from './components/Timeline'
 import BlogCard from './components/BlogCard'
 import SkillGroupCard from './components/SkillGroupCard'
+import ContactModal from './components/ContactModal'
+import Footer from './components/Footer'
 import { projects } from './data/projects'
 import { experience } from './data/experience'
 import { education } from './data/education'
@@ -12,7 +15,9 @@ import { skillGroups } from './data/skills'
 import { blogPosts } from './data/blog'
 
 export default function App() {
-  const openContact = () => alert('Contact form coming in Phase 4')
+  const [contactOpen, setContactOpen] = useState(false)
+  const openContact = () => setContactOpen(true)
+  const closeContact = () => setContactOpen(false)
 
   return (
     <>
@@ -52,6 +57,8 @@ export default function App() {
           </div>
         </Section>
       </main>
+      <Footer />
+      <ContactModal open={contactOpen} onClose={closeContact} />
     </>
   )
 }
