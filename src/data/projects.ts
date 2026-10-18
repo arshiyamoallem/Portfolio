@@ -12,7 +12,7 @@ export const projects: Project[] = [
   {
     title: 'CmdConnect',
     description: 'Console-based social media app.',
-    tags: ['Python', 'CLI'],
+    tags: ['C', 'CLI'],
     href: 'https://github.com/arshiyamoallem/social-media-app',
     icon: 'users',
   },
@@ -26,7 +26,7 @@ export const projects: Project[] = [
   {
     title: 'Tic Tac Toe',
     description: 'Tic Tac Toe game with a graphical interface.',
-    tags: ['Python', 'Tkinter'],
+    tags: ['Java', 'Java Swing'],
     href: 'https://github.com/arshiyamoallem/TicTacToe',
     icon: 'gamepad',
   },

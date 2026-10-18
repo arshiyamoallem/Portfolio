@@ -4,7 +4,7 @@ export const experience: TimelineEntry[] = [
   {
     title: 'Digital Solutions Developer Co-op',
     organization: 'Department of National Defence and Canadian Armed Forces (DND)',
-    dates: 'Sept 2026 – Present',
+    dates: 'Sept 2026 - Present',
     bullets: [
       'Developed client-facing web applications using Power Apps to digitize internal workflows',
       'Engineered automated backend workflows with Power Automate to streamline client approvals',
@@ -15,7 +15,7 @@ export const experience: TimelineEntry[] = [
   {
     title: 'Cloud IT Technician',
     organization: 'Shared Services Canada (SSC)',
-    dates: 'May 2025 – Dec 2025',
+    dates: 'May 2025 - Dec 2025',
     bullets: [
       'Configured 4 OpenStack VMs and a load balancer routing SSH traffic across backend nodes',
       'Automated virtual infrastructure deployments using Terraform and Ansible, establishing Infrastructure as Code (IaC) workflows in a private cloud setting',
