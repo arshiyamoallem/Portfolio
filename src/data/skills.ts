@@ -8,8 +8,8 @@ export const skillGroups: SkillGroup[] = [
       { name: 'Java', icon: 'devicon-java-plain' },
       { name: 'C', icon: 'devicon-c-plain' },
       { name: 'Go', icon: 'devicon-go-plain' },
-      { name: 'SQL' },
-      { name: 'Racket' },
+      { name: 'SQL', icon: 'devicon-azuresqldatabase-plain' },
+
     ],
   },
   {
@@ -28,9 +28,11 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       { name: 'Terraform', icon: 'devicon-terraform-plain' },
       { name: 'Ansible', icon: 'devicon-ansible-plain' },
-      { name: 'OpenStack' },
+      { name: 'OpenStack', icon: 'devicon-openstack-plain' },
       { name: 'Git', icon: 'devicon-git-plain' },
       { name: 'Linux', icon: 'devicon-linux-plain' },
+      { name: 'PowerShell', icon: 'devicon-powershell-plain' },
+      { name: 'Docker', icon: 'devicon-docker-plain' },
     ],
   },
   {

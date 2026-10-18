@@ -3,6 +3,8 @@ import Hero from './components/Hero'
 import Section from './components/Section'
 import ProjectCard from './components/ProjectCard'
 import Timeline from './components/Timeline'
+import BlogCard from './components/BlogCard'
+import SkillGroupCard from './components/SkillGroupCard'
 import { projects } from './data/projects'
 import { experience } from './data/experience'
 import { education } from './data/education'
@@ -35,11 +37,19 @@ export default function App() {
         </Section>
 
         <Section id="blog" title="Blog">
-          <p className="text-muted">{blogPosts.length} posts loaded</p>
+          <div className="grid gap-6 md:grid-cols-3">
+            {blogPosts.map((post) => (
+              <BlogCard key={post.title} post={post} />
+            ))}
+          </div>
         </Section>
 
         <Section id="skills" title="Skills">
-          <p className="text-muted">{skillGroups.length} groups loaded</p>
+          <div className="grid gap-6 sm:grid-cols-2">
+            {skillGroups.map((group) => (
+              <SkillGroupCard key={group.title} group={group} />
+            ))}
+          </div>
         </Section>
       </main>
     </>
