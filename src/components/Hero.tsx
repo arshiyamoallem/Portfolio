@@ -1,5 +1,3 @@
-import { links } from '../data/links'
-
 type Props = {
   onContactClick: () => void
 }
@@ -32,12 +30,6 @@ export default function Hero({ onContactClick }: Props) {
                   className="rounded-full border border-border px-6 py-3 font-semibold transition hover:border-accent">
             Contact Me
           </button>
-        </div>
-
-        <div className="mt-6 flex items-center gap-5 text-sm text-muted">
-          <a href={links.github} target="_blank" rel="noreferrer" className="hover:text-text">GitHub</a>
-          <a href={links.linkedin} target="_blank" rel="noreferrer" className="hover:text-text">LinkedIn</a>
-          <a href={links.resume} target="_blank" rel="noreferrer" className="hover:text-text">Resume</a>
         </div>
 
         <ul className="mt-10 flex flex-wrap gap-2">
