@@ -1,5 +1,6 @@
 export type Project = {
   title: string
+  img?: string
   description: string
   tags: string[]
   href: string
@@ -26,6 +27,7 @@ export type SkillGroup = {
 
 export type BlogPost = {
   title: string
+  img?: string
   date: string
   tag: string
   excerpt: string
