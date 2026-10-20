@@ -13,6 +13,15 @@ export default function BlogCard({ post }: Props) {
       </div>
 
       <h3 className="text-lg font-semibold leading-snug">{post.title}</h3>
+      {post.img ? (
+        <img
+          src={`${import.meta.env.BASE_URL}${post.img}`}
+          alt={`Screenshot of ${post.title}`}
+          loading="lazy"
+          className="mb-4 w-full rounded-lg border border-border"
+        />
+      ) : null
+      }
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{post.excerpt}</p>
 
       {post.href ? (
