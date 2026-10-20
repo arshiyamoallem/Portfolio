@@ -13,7 +13,17 @@ type Props = {
 export default function ProjectCard({ project }: Props) {
   return (
     <article className="flex flex-col rounded-xl border border-border bg-surface p-6 transition hover:-translate-y-1 hover:border-accent">
-      <div className="mb-4 text-3xl">{icons[project.icon]}</div>
+      {project.img ? (
+        <img
+          src={`${import.meta.env.BASE_URL}${project.img}`}
+          alt={`Screenshot of ${project.title}`}
+          loading="lazy"
+          className="mb-4 w-full rounded-lg border border-border"
+        />
+      ) : (
+        <div className="mb-4 text-3xl">{icons[project.icon]}</div>
+      )}
+      
       <h3 className="text-lg font-semibold">{project.title}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{project.description}</p>
 

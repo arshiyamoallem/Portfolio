@@ -3,6 +3,7 @@ import type { Project } from './types'
 export const projects: Project[] = [
   {
     title: 'Library Management Database',
+    img: 'sample_img/LibraryDB_sample.png',
     description:
       'Library management system with a desktop GUI and a relational database backend.',
     tags: ['Python', 'SQLite', 'Tkinter'],
@@ -25,6 +26,7 @@ export const projects: Project[] = [
   },
   {
     title: 'Tic Tac Toe',
+    img: 'sample_img/tictactoe.jpg',
     description: 'Tic Tac Toe game with a graphical interface.',
     tags: ['Java', 'Java Swing'],
     href: 'https://github.com/arshiyamoallem/TicTacToe',

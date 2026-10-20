@@ -2,14 +2,17 @@ import type { BlogPost } from './types'
 
 export const blogPosts: BlogPost[] = [
   {
-    title: 'Building a private cloud lab with OpenStack, Terraform and Ansible',
-    date: 'Coming soon',
-    tag: 'Cloud',
+    title: 'Finishing the Docker Foundations Professional Certificate',
+    img:'sample_img/Docker Foundations Professional Certificate.jpeg',
+    date: 'July 5th, 2026',
+    tag: 'Docker',
     excerpt:
-      'What I learned configuring VMs, a load balancer, and Infrastructure as Code workflows during my co-op at Shared Services Canada.',
+      'What I learned about containers, images, Dockerfiles, volumes, and Docker Compose, and how I plan to use them in my own projects.',
+      href: 'https://www.linkedin.com/learning/certificates/2218907b9f2ed2573f0de72718c9dec9797802d6094aba51ee82c5f807ae8760?trk=share_certificate'
   },
   {
     title: 'Digitizing workflows with Power Apps and Power Automate',
+    img:'',
     date: 'Coming soon',
     tag: 'Automation',
     excerpt:
@@ -17,6 +20,7 @@ export const blogPosts: BlogPost[] = [
   },
   {
     title: 'Designing a library management database',
+    img:'',
     date: 'Coming soon',
     tag: 'Projects',
     excerpt:
