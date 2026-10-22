@@ -4,6 +4,7 @@ export type Project = {
   description: string
   tags: string[]
   href: string
+  caseStudy?: string
   icon: string // Font Awesome-style name, used later
 }
 
